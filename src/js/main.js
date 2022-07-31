@@ -5,32 +5,35 @@ const actionsBtnNotifications = document.querySelector('.actions__btn--notificat
 const modalNotificationsBtnClose = document.querySelector('.modal-notifications__btn-close');
 const modalNotifications = document.querySelector('.modal-notifications');
 const popupNewsBtnClose = document.querySelector('.popup-news__btn-close');
-const popupNewsClose = document.querySelector('.popup-news--close');
 const popupNews = document.querySelector('.popup-news');
 const notificationsContentLinkUnread = document.querySelector('.notifications-content__link--unread');
 const overlay = document.querySelector('.overlay');
+const body = document.querySelector('.body');
 
 actionsBtnNotifications.addEventListener("click", function () {
-  modalNotifications.classList.remove("modal-notifications--closed");
+  modalNotifications.classList.add("modal-notifications--opened");
 });
 
 notificationsContentLinkUnread.addEventListener("click", function () {
   popupNews.classList.remove("popup-news--closed");
   overlay.classList.add('overlay--active');
+  body.style.overflow = "hidden";
 });
 
 modalNotificationsBtnClose.addEventListener("click", function () {
-  modalNotifications.classList.add("modal-notifications--closed");
+  modalNotifications.classList.remove("modal-notifications--opened");
 });
 
 popupNewsBtnClose.addEventListener("click", function () {
   popupNews.classList.add("popup-news--closed");
   overlay.classList.remove('overlay--active');
+  body.style.overflow = "";
 });
 
 overlay.addEventListener('click', function () {
   popupNews.classList.add("popup-news--closed");
   overlay.classList.remove('overlay--active');
+  body.style.overflow = "";
 });
 
 window.addEventListener("keydown", function (event) {
@@ -39,6 +42,7 @@ window.addEventListener("keydown", function (event) {
       event.preventDefault();
       popupNews.classList.add("popup-news--closed");
       overlay.classList.remove('overlay--active');
+      body.style.overflow = "";
     }
   }
 });

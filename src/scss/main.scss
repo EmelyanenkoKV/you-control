@@ -24,6 +24,10 @@ html, body {
   height: 100%;
 }
 
+body {
+  position: relative;
+}
+
 .full-wrapper {
   padding-bottom: 210px;
   position: relative;

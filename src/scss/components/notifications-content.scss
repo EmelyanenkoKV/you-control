@@ -5,16 +5,16 @@
     overflow-y: auto;
     height: calc(100% - 70px);
     z-index: 100;
-    background-color: #fff;
+    background-color: var(--white);
   }
 
   &__header {
     padding: 34px 16px 19px;
-    background-color: #FFFFFF;
+    background-color: var(--white);
 
     &--full {
       padding: 30px 30px 20px 30px;
-      box-shadow: inset 0 -1px 0 #E5E5E5;
+      box-shadow: inset 0 -1px 0 var(--light-gray);
     }
   }
 
@@ -22,13 +22,13 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 15px;
-    color: #717171;
+    color: var(--gray-title);
 
     &--black {
       font-weight: 500;
       font-size: 18px;
       line-height: 21px;
-      color: #1A1A1A;
+      color: var(--dark);
     }
   }
 
@@ -40,23 +40,33 @@
     }
 
     &--unread {
-      background: #F8F8F8;
+      background: var(--gray-item);
+    }
+
+    &:active,
+    &:hover {
+      background-color: var(--blue-hover);
     }
   }
 
   &__link {
     padding: 18px 0;
-    background: #FFFFFF;
+    background: var(--white);
     display: flex;
     flex-direction: column;
-    box-shadow: inset 0 -1px 0 #E5E5E5;
+    box-shadow: inset 0 -1px 0 var(--light-gray);
 
     &--full {
       padding: 16px 0;
     }
 
     &--unread {
-      background: #F8F8F8;
+      background-color: var(--gray-item);
+    }
+
+    &:active,
+    &:hover {
+      background-color: var(--blue-hover);
     }
   }
 
@@ -64,7 +74,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 14px;
-    color: #1A1A1A;
+    color: var(--dark);
     opacity: 0.75;
     margin-bottom: 12px;
     overflow: hidden !important;

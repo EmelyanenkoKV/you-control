@@ -1,14 +1,17 @@
 .modal-notifications {
   background-color: var(--white);
   width: 420px;
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: -460px;
   top: 0;
   bottom: 0;
   height: 100%;
+  transition: all ease-in-out .3s;
+  padding-top: 69px;
 
-  &--closed {
-    display: none;
+  &--opened {
+    display: block;
+    right: 0;
   }
 
   &__btn-close {
@@ -48,9 +51,10 @@
   }
 
   &__notifications-content {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     height: 100%;
-    z-index: 10000;
+    z-index: 100000;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
     &--alert {
       display: flex;
@@ -90,40 +94,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
-
-  animation-name: slideLeft;
-  -webkit-animation-name: slideLeft;
-
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
-
-  visibility: visible !important;
-
-  @keyframes slideLeft {
-    80% {
-      transform: translateX(-4%);
-    }
-    95% {
-      transform: translateX(2%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-
-  @-webkit-keyframes slideLeft {
-    80% {
-      -webkit-transform: translateX(-4%);
-    }
-    95% {
-      -webkit-transform: translateX(2%);
-    }
-    100% {
-      -webkit-transform: translateX(0%);
-    }
   }
 }
