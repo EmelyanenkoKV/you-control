@@ -1,0 +1,33 @@
+.main {
+  max-width: 960px;
+  width: 100%;
+  background-color: var(--light-white);
+  height: 100%;
+
+  &--tabs {
+    background-color: var(--white-grey);
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: var(--black-gray);
+    margin-bottom: 19px;
+  }
+
+  &__content {
+    padding: 31px 40px 40px 26px;
+    max-width: 962px;
+  }
+
+  &__img {
+    width: auto;
+    height: auto;
+  }
+
+  &__content-tabs {
+    padding-top: 70px;
+    background-color: var(--white);
+  }
+}

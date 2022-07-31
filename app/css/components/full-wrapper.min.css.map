@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/full-wrapper.scss"],"names":[],"mappings":"AAAA,cACE,eAAA,MACA,SAAA","file":"full-wrapper.min.css","sourcesContent":[".full-wrapper {\n  padding-bottom: 210px;\n  position: relative;\n}\n"]}

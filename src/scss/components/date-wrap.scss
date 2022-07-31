@@ -1,0 +1,44 @@
+.date-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+
+  &__mark {
+    padding: 6px;
+    border-radius: 12px;
+    display: flex;
+
+    &--news {
+      background-color: var(--green);
+    }
+
+    &--update {
+      background-color: var(--red);
+    }
+
+    &--webinar {
+      background-color: var(--yellow);
+    }
+
+    &--meeting {
+      background-color: var(--blue);
+    }
+  }
+
+  &__mark-text {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: right;
+    color: var(--gray);
+    opacity: 0.75;
+  }
+}

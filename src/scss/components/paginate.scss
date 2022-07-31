@@ -1,0 +1,43 @@
+.paginate {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    outline: 1px solid var(--light-gray);
+
+    &.active {
+      a {
+        color: var(--green);
+      }
+    }
+
+    &--first {
+      outline: 1px solid var(--light-gray);
+      width: 34px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    &--last {
+      outline: 1px solid var(--light-gray);
+      width: 34px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    & a {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: var(--graphite);
+    }
+  }
+}

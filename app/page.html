@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notification_2</title>
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+<div class="overlay"></div>
+<header class="header">
+  <div class="header__wrapper">
+    <div class="header__main-nav main-nav">
+      <div class="main-nav__logo-wrap">
+        <a class="main-nav__logo-link" href="index.html">
+          <svg width="88" height="34">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+      </div>
+      <button class="main-nav__toggle" type="button" aria-label="Меню">
+        <span class="main-nav__span"></span>
+      </button>
+    </div>
+    <div class="header__wrap">
+      <div class="header__search">
+      </div>
+      <div class="header__tariff">
+      </div>
+      <div class="header__actions actions">
+        <ul class="actions__list">
+          <li class="actions__item">
+            <button type="button" class="actions__btn actions__btn--notifications">
+              <svg width="16" height="16">
+                <use xlink:href="img/sprite.svg#notifications"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="actions__item">
+            <button class="actions__btn actions__btn--personal" type="button">
+              <svg width="15" height="16">
+                <use xlink:href="img/sprite.svg#personal"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="full-container">
+  <aside class="sidebar">
+    <ul class="sidebar__list-menu list-menu">
+      <li class="list-menu__item">
+        <a class="list-menu__link list-menu__link--active" href="#">
+          <svg width="24" height="24">
+            <use xlink:href="img/sprite.svg#dashboard"></use>
+          </svg>
+          <span>Дашборд</span>
+        </a>
+      </li>
+      <li class="list-menu__item">
+        <a class="list-menu__link" href="#">
+          <svg width="24" height="24">
+            <use xlink:href="img/sprite.svg#dossier"></use>
+          </svg>
+          <span>Пошук по досьє</span>
+        </a>
+      </li>
+      <li class="list-menu__item">
+        <a class="list-menu__link" href="#">
+          <svg width="24" height="24">
+            <use xlink:href="img/sprite.svg#monitoring"></use>
+          </svg>
+          <span>Моніторинг</span>
+        </a>
+      </li>
+      <li class="list-menu__item">
+        <a class="list-menu__link" href="#">
+          <svg width="24" height="24">
+            <use xlink:href="img/sprite.svg#counterparties"></use>
+          </svg>
+          <span>Мої контрагенти</span>
+        </a>
+      </li>
+      <li class="list-menu__item">
+        <a class="list-menu__link" href="#">
+          <svg width="24" height="24">
+            <use xlink:href="img/sprite.svg#calls"></use>
+          </svg>
+          <span>Пошук зв'язків</span>
+        </a>
+      </li>
+      <li class="list-menu__item">
+        <a class="list-menu__link" href="#">
+          <svg width="24" height="24">
+            <use xlink:href="img/sprite.svg#markets"></use>
+          </svg>
+          <span>Ринки</span>
+        </a>
+      </li>
+      <li class="list-menu__item">
+        <a class="list-menu__link" href="#">
+          <svg width="24" height="24">
+            <use xlink:href="img/sprite.svg#registers"></use>
+          </svg>
+          <span>Список реєстрів</span>
+        </a>
+      </li>
+      <li class="list-menu__item">
+        <a class="list-menu__link list-menu__link--border" href="#">
+          <svg width="24" height="24">
+            <use xlink:href="img/sprite.svg#information"></use>
+          </svg>
+          <span>Інформація</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <div class="full-wrapper">
+    <main class="main main--tabs">
+      <div class="main__content-tabs">
+        <div class="tabs">
+          <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+          <label class="tabs__label" for="tab-btn-1">Мій акаунт</label>
+          <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+          <label class="tabs__label" for="tab-btn-2">Історія транзакцій</label>
+          <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+          <label class="tabs__label" for="tab-btn-3">Сповіщення</label>
+
+          <div class="tabs__content" id="content-1">
+            <div class="notifications-content">
+              <div class="notifications-content__wrapper">
+                <div class="notifications-content__header notifications-content__header--full">
+                  <h2 class="notifications-content__title notifications-content__title--black">Ваші сповіщення</h2>
+                </div>
+                <ul class="notifications-content__list-menu">
+                  <li
+                    class="notifications-content__item notifications-content__item--full notifications-content__item--unread">
+                    <a
+                      class="notifications-content__link notifications-content__link--full notifications-content__link--unread"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-29T00:00">Сьогодні 29.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Нові функції моніторинга</h3>
+                      <p class="notifications-content__desc">Uniquely fashion B2B content for one-to-one web-readiness.
+                        Continually
+                        embrace.</p>
+                    </a>
+                  </li>
+
+                  <li class="notifications-content__item notifications-content__item--full">
+                    <a class="notifications-content__link notifications-content__link--full " href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-28T00:00">28.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Оновленна вкладка судових рішень</h3>
+                      <p class="notifications-content__desc">Synergistically aggregate inexpensive value after
+                        enterprise
+                        e-tailers.
+                        Assertively mesh cooperative resources before revolutionary bandwidth. Globally expedite
+                        team.</p>
+                    </a>
+                  </li>
+
+                  <li class="notifications-content__item notifications-content__item--full">
+                    <a class="notifications-content__link notifications-content__link--full" href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--update">
+                          <span class="date-wrap__mark-text">Гаряча новина</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-28T00:00">28.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Сьогодні YouControl провів зустріч з представн...</h3>
+                      <p class="notifications-content__desc">Competently exploit competitive best practices through
+                        timely total
+                        linkage. Continually e-enable exceptional.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full notifications-content__item--unread">
+                    <a
+                      class="notifications-content__link notifications-content__link--full notifications-content__link--unread"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-21T00:00">21.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Нові функції моніторинга</h3>
+                      <p class="notifications-content__desc">Uniquely fashion B2B content for one-to-one web-readiness.
+                        Continually
+                        embrace.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full">
+                    <a
+                      class="notifications-content__link notifications-content__link--full"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-20T00:00">20.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Оновленна вкладка судових рішень</h3>
+                      <p class="notifications-content__desc">Synergistically aggregate inexpensive value after
+                        enterprise
+                        e-tailers.
+                        Assertively mesh cooperative resources before revolutionary bandwidth. Globally expedite
+                        team.</p>
+                    </a>
+                  </li>
+
+                  <li class="notifications-content__item notifications-content__item--full">
+                    <a class="notifications-content__link notifications-content__link--full" href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--update">
+                          <span class="date-wrap__mark-text">Гаряча новина</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-28T00:00">28.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Сьогодні YouControl провів зустріч з представн...</h3>
+                      <p class="notifications-content__desc">Competently exploit competitive best practices through
+                        timely total
+                        linkage. Continually e-enable exceptional.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full notifications-content__item--unread">
+                    <a
+                      class="notifications-content__link notifications-content__link--full notifications-content__link--unread"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-21T00:00">21.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Нові функції моніторинга</h3>
+                      <p class="notifications-content__desc">Uniquely fashion B2B content for one-to-one web-readiness.
+                        Continually
+                        embrace.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full">
+                    <a
+                      class="notifications-content__link notifications-content__link--full"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-20T00:00">20.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Оновленна вкладка судових рішень</h3>
+                      <p class="notifications-content__desc">Synergistically aggregate inexpensive value after
+                        enterprise
+                        e-tailers.
+                        Assertively mesh cooperative resources before revolutionary bandwidth. Globally expedite
+                        team.</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="paginate">
+              <ul class="paginate__list">
+                <li class="paginate__item paginate__item--first">
+                  <a href="#">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/sprite.svg#arrow-left"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="paginate__item active"><a href="#">1</a></li>
+                <li class="paginate__item"><a href="#">2</a></li>
+                <li class="paginate__item"><a href="#">3</a></li>
+                <li class="paginate__item"><a href="#">4</a></li>
+                <li class="paginate__item"><a href="#">5</a></li>
+                <li class="paginate__item more"><a href="#">&hellip;</a></li>
+                <li class="paginate__item"><a href="#">9</a></li>
+                <li class="paginate__item paginate__item--last">
+                  <a href="#">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tabs__content" id="content-2">
+            <div class="notifications-content">
+              <div class="notifications-content__wrapper">
+                <div class="notifications-content__header notifications-content__header--full">
+                  <h2 class="notifications-content__title notifications-content__title--black">Ваші сповіщення</h2>
+                </div>
+                <ul class="notifications-content__list-menu">
+                  <li
+                    class="notifications-content__item notifications-content__item--full notifications-content__item--unread">
+                    <a
+                      class="notifications-content__link notifications-content__link--full notifications-content__link--unread"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-29T00:00">Сьогодні 29.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Нові функції моніторинга</h3>
+                      <p class="notifications-content__desc">Uniquely fashion B2B content for one-to-one web-readiness.
+                        Continually
+                        embrace.</p>
+                    </a>
+                  </li>
+
+                  <li class="notifications-content__item notifications-content__item--full">
+                    <a class="notifications-content__link notifications-content__link--full " href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-28T00:00">28.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Оновленна вкладка судових рішень</h3>
+                      <p class="notifications-content__desc">Synergistically aggregate inexpensive value after
+                        enterprise
+                        e-tailers.
+                        Assertively mesh cooperative resources before revolutionary bandwidth. Globally expedite
+                        team.</p>
+                    </a>
+                  </li>
+
+                  <li class="notifications-content__item notifications-content__item--full">
+                    <a class="notifications-content__link notifications-content__link--full" href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--update">
+                          <span class="date-wrap__mark-text">Гаряча новина</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-28T00:00">28.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Сьогодні YouControl провів зустріч з представн...</h3>
+                      <p class="notifications-content__desc">Competently exploit competitive best practices through
+                        timely total
+                        linkage. Continually e-enable exceptional.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full notifications-content__item--unread">
+                    <a
+                      class="notifications-content__link notifications-content__link--full notifications-content__link--unread"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-21T00:00">21.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Нові функції моніторинга</h3>
+                      <p class="notifications-content__desc">Uniquely fashion B2B content for one-to-one web-readiness.
+                        Continually
+                        embrace.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full">
+                    <a
+                      class="notifications-content__link notifications-content__link--full"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-20T00:00">20.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Оновленна вкладка судових рішень</h3>
+                      <p class="notifications-content__desc">Synergistically aggregate inexpensive value after
+                        enterprise
+                        e-tailers.
+                        Assertively mesh cooperative resources before revolutionary bandwidth. Globally expedite
+                        team.</p>
+                    </a>
+                  </li>
+
+                  <li class="notifications-content__item notifications-content__item--full">
+                    <a class="notifications-content__link notifications-content__link--full" href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--update">
+                          <span class="date-wrap__mark-text">Гаряча новина</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-28T00:00">28.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Сьогодні YouControl провів зустріч з представн...</h3>
+                      <p class="notifications-content__desc">Competently exploit competitive best practices through
+                        timely total
+                        linkage. Continually e-enable exceptional.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full notifications-content__item--unread">
+                    <a
+                      class="notifications-content__link notifications-content__link--full notifications-content__link--unread"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-21T00:00">21.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Нові функції моніторинга</h3>
+                      <p class="notifications-content__desc">Uniquely fashion B2B content for one-to-one web-readiness.
+                        Continually
+                        embrace.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full">
+                    <a
+                      class="notifications-content__link notifications-content__link--full"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-20T00:00">20.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Оновленна вкладка судових рішень</h3>
+                      <p class="notifications-content__desc">Synergistically aggregate inexpensive value after
+                        enterprise
+                        e-tailers.
+                        Assertively mesh cooperative resources before revolutionary bandwidth. Globally expedite
+                        team.</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="paginate">
+              <ul class="paginate__list">
+                <li class="paginate__item paginate__item--first">
+                  <a href="#">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/sprite.svg#arrow-left"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="paginate__item active"><a href="#">1</a></li>
+                <li class="paginate__item"><a href="#">2</a></li>
+                <li class="paginate__item"><a href="#">3</a></li>
+                <li class="paginate__item"><a href="#">4</a></li>
+                <li class="paginate__item"><a href="#">5</a></li>
+                <li class="paginate__item more"><a href="#">&hellip;</a></li>
+                <li class="paginate__item"><a href="#">9</a></li>
+                <li class="paginate__item paginate__item--last">
+                  <a href="#">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tabs__content" id="content-3">
+            <div class="notifications-content">
+              <div class="notifications-content__wrapper">
+                <div class="notifications-content__header notifications-content__header--full">
+                  <h2 class="notifications-content__title notifications-content__title--black">Ваші сповіщення</h2>
+                </div>
+                <ul class="notifications-content__list-menu">
+                  <li
+                    class="notifications-content__item notifications-content__item--full notifications-content__item--unread">
+                    <a
+                      class="notifications-content__link notifications-content__link--full notifications-content__link--unread"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-29T00:00">Сьогодні 29.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Нові функції моніторинга</h3>
+                      <p class="notifications-content__desc">Uniquely fashion B2B content for one-to-one web-readiness.
+                        Continually
+                        embrace.</p>
+                    </a>
+                  </li>
+
+                  <li class="notifications-content__item notifications-content__item--full">
+                    <a class="notifications-content__link notifications-content__link--full " href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-28T00:00">28.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Оновленна вкладка судових рішень</h3>
+                      <p class="notifications-content__desc">Synergistically aggregate inexpensive value after
+                        enterprise
+                        e-tailers.
+                        Assertively mesh cooperative resources before revolutionary bandwidth. Globally expedite
+                        team.</p>
+                    </a>
+                  </li>
+
+                  <li class="notifications-content__item notifications-content__item--full">
+                    <a class="notifications-content__link notifications-content__link--full" href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--update">
+                          <span class="date-wrap__mark-text">Гаряча новина</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-28T00:00">28.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Сьогодні YouControl провів зустріч з представн...</h3>
+                      <p class="notifications-content__desc">Competently exploit competitive best practices through
+                        timely total
+                        linkage. Continually e-enable exceptional.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full notifications-content__item--unread">
+                    <a
+                      class="notifications-content__link notifications-content__link--full notifications-content__link--unread"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-21T00:00">21.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Нові функції моніторинга</h3>
+                      <p class="notifications-content__desc">Uniquely fashion B2B content for one-to-one web-readiness.
+                        Continually
+                        embrace.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full">
+                    <a
+                      class="notifications-content__link notifications-content__link--full"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-20T00:00">20.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Оновленна вкладка судових рішень</h3>
+                      <p class="notifications-content__desc">Synergistically aggregate inexpensive value after
+                        enterprise
+                        e-tailers.
+                        Assertively mesh cooperative resources before revolutionary bandwidth. Globally expedite
+                        team.</p>
+                    </a>
+                  </li>
+
+                  <li class="notifications-content__item notifications-content__item--full">
+                    <a class="notifications-content__link notifications-content__link--full" href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--update">
+                          <span class="date-wrap__mark-text">Гаряча новина</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-28T00:00">28.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Сьогодні YouControl провів зустріч з представн...</h3>
+                      <p class="notifications-content__desc">Competently exploit competitive best practices through
+                        timely total
+                        linkage. Continually e-enable exceptional.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full notifications-content__item--unread">
+                    <a
+                      class="notifications-content__link notifications-content__link--full notifications-content__link--unread"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-21T00:00">21.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Нові функції моніторинга</h3>
+                      <p class="notifications-content__desc">Uniquely fashion B2B content for one-to-one web-readiness.
+                        Continually
+                        embrace.</p>
+                    </a>
+                  </li>
+
+                  <li
+                    class="notifications-content__item notifications-content__item--full">
+                    <a
+                      class="notifications-content__link notifications-content__link--full"
+                      href="#">
+                      <div class="notifications-content__date-wrap date-wrap">
+                        <div class="date-wrap__mark date-wrap__mark--news">
+                          <span class="date-wrap__mark-text">оновлення</span>
+                        </div>
+                        <time class="date-wrap__date" datetime="2019-05-20T00:00">20.05.2019</time>
+                      </div>
+                      <h3 class="notifications-content__subtitle">Оновленна вкладка судових рішень</h3>
+                      <p class="notifications-content__desc">Synergistically aggregate inexpensive value after
+                        enterprise
+                        e-tailers.
+                        Assertively mesh cooperative resources before revolutionary bandwidth. Globally expedite
+                        team.</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="paginate">
+              <ul class="paginate__list">
+                <li class="paginate__item paginate__item--first">
+                  <a href="#">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/sprite.svg#arrow-left"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="paginate__item active"><a href="#">1</a></li>
+                <li class="paginate__item"><a href="#">2</a></li>
+                <li class="paginate__item"><a href="#">3</a></li>
+                <li class="paginate__item"><a href="#">4</a></li>
+                <li class="paginate__item"><a href="#">5</a></li>
+                <li class="paginate__item more"><a href="#">&hellip;</a></li>
+                <li class="paginate__item"><a href="#">9</a></li>
+                <li class="paginate__item paginate__item--last">
+                  <a href="#">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__wrap">
+          <h4 class="footer__subtitle footer__subtitle--tell">Дзвінок безкоштовний</h4>
+          <div class="footer__wrap-contacts">
+            <a class="footer__link footer__link--tell" href="tel:0800309077">0 800 309 077</a>
+            <a class="footer__link footer__link--email" href="mailto:mail@youcontrol.com.ua">mail@youcontrol.com.ua</a>
+          </div>
+          <div class="footer__call-wrap">
+            <span class="footer__desc footer__desc--call">Вирішили купувати?</span>
+            <button class="footer__btn-call">Заказать звонок</button>
+          </div>
+        </div>
+        <div class="footer__wrap">
+          <h4 class="footer__subtitle">Для користувачів</h4>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Можливості
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Кейси
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Тарифи
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__wrap">
+          <h4 class="footer__subtitle">Наші проекти</h4>
+          <ul class="footer__list footer__list--partners">
+            <li class="footer__item">
+              <a class="footer__link-logo" href="#">
+                <svg width="16" height="16">
+                  <use xlink:href="img/sprite.svg#youscore"></use>
+                </svg>
+              </a>
+              <div class="footer__item-wrap">
+                <a class="footer__link" href="#">
+                  YouScore
+                </a>
+                <span class="footer__link-desc">Доступ по API</span>
+              </div>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link-logo" href="#">
+                <svg width="16" height="16">
+                  <use xlink:href="img/sprite.svg#chrome"></use>
+                </svg>
+              </a>
+              <div class="footer__item-wrap">
+                <a class="footer__link" href="#">
+                  Додаток
+                </a>
+                <span class="footer__link-desc">Chrome, Mozilla</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__wrap">
+          <p class="footer__slogan">©YouControl – повне досьє на кожну компанію України</p>
+          <ul class="footer__social-list social-list">
+            <li class="social-list__item">
+              <a href="#">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="footer__wrap-bank wrap-bank">
+            <p class="wrap-bank__desc">Сплачуйте онлайн:</p>
+            <ul class="wrap-bank__list-icon">
+              <li class="wrap-bank__item-icon">
+                <a href="#">
+                  <svg width="32" height="32">
+                    <use xlink:href="img/sprite.svg#visa"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="wrap-bank__item-icon">
+                <a href="#">
+                  <svg width="32" height="32">
+                    <use xlink:href="img/sprite.svg#visa-icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-notifications modal-notifications--closed">
+      <button class="modal-notifications__btn-close" type="button">
+        <span class="modal-notifications__span"></span>
+      </button>
+      <div class="modal-notifications__notifications-content modal-notifications__notifications-content--alert">
+        <svg width="56" height="56">
+          <use xlink:href="img/sprite.svg#alert"></use>
+        </svg>
+        <p class="modal-notifications__alert">Тут будуть показані всі нові <br> сповіщення</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.wrap-bank {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__desc {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    color: var(--medium-gray);
+    margin-right: 14px;
+  }
+
+  &__list-icon {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &__item-icon {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
