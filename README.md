@@ -1,2 +1,7 @@
 # you-control
-test
+
+npm i 
+
+npm i gulp
+
+gulp
