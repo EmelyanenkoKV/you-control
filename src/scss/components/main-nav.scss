@@ -30,6 +30,11 @@
 
   &__logo-link {
     display: flex;
+
+    &:active,
+    &:hover {
+      opacity: .7;
+    }
   }
 
   &__wrap {

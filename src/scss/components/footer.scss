@@ -92,6 +92,11 @@
     outline: none;
     margin-top: 8px;
     cursor: pointer;
+
+    &:active,
+    &:hover {
+      opacity: .7;
+    }
   }
 
   &__subtitle {
@@ -124,6 +129,11 @@
       font-size: 13px;
       line-height: 15px;
       color: var(--dark-blue);
+    }
+
+    &:active,
+    &:hover {
+      opacity: .7;
     }
   }
 }

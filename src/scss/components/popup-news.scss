@@ -125,6 +125,11 @@
       width: 16px;
       height: 16px;
     }
+
+    &:active,
+    &:hover {
+      opacity: .7;
+    }
   }
 
   &__subtitle {
@@ -173,6 +178,11 @@
       border-radius: 3px;
       min-width: 172px;
       padding: 8px 9px 9px 22px;
+    }
+
+    &:active,
+    &:hover {
+      opacity: .7;
     }
   }
 }

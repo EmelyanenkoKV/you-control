@@ -20,6 +20,11 @@
       }
     }
 
+    &:active,
+    &:hover {
+      opacity: .7;
+    }
+
     &--first {
       outline: 1px solid var(--light-gray);
       width: 34px;
